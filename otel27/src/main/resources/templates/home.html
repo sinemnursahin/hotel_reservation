@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Renkli Rüyalar Oteli</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/home.css}" />
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+    <div class="left-section">
+        <a href="/home">Ana Sayfa</a>
+    </div>
+    <div class="button-container">
+        <!-- Ortada Butonlar: Odalara Görüntüle ve Rezervasyonu İptal Et -->
+        <a href="/rooms" class="button">Odaları Görüntüle</a>
+        <a href="/cancel-reservation" class="cancel-button">Rezervasyonu İptal Et</a>
+    </div>
+    <div class="right-section">
+        <!-- Kullanıcı Durumu -->
+        <span th:if="${session.loggedInUser != null}">
+            Hoşgeldin, <b th:text="${session.loggedInUser}"></b>!
+            <a th:href="@{/logout}" style="margin-left: 10px;">Çıkış Yap</a>
+        </span>
+        <span th:if="${session.loggedInUser == null}">
+            <a th:href="@{/login}">Login</a> | <a th:href="@{/register}">Kayıt Ol</a>
+        </span>
+    </div>
+</nav>
+
+<!-- Başlık -->
+<h1>Renklı Rüyalar Oteli'ne Hoşgeldiniz</h1>
+
+<!-- Otel Bilgileri -->
+<div class="hotel-info">
+    <h2>Otelimiz Hakkında</h2>
+    <p>Renkli Rüyalar Oteli, misafirlerine lüks bir deneyim sunmak amacıyla inşa edilmiştir. Otelimiz, modern olanaklarla donatılmış, huzurlu bir ortamda konaklama imkanı sunuyor. Geniş odalar, kaliteli hizmet ve eşsiz bir konfor ile tatiliniz boyunca kendinizi özel hissedeceksiniz.</p>
+    <p>Hizmetlerimiz:</p>
+    <ul>
+        <li>Ücretsiz Wi-Fi</li>
+        <li>Spa ve Sağlık Merkezi</li>
+        <li>Restoran ve Kafeler</li>
+        <li>Yüzme Havuzu</li>
+        <li>24 Saat Resepsiyon</li>
+    </ul>
+</div>
+
+<!-- İletişim Bilgileri -->
+<div class="contact-info">
+    <h3>İletişim Bilgileri</h3>
+    <ul>
+        <li>Email: info@renklioteli.com</li>
+        <li>Telefon: +90 555 123 45 67</li>
+        <li>Adres: Beylikdüzü, İstanbul, Türkiye</li>
+    </ul>
+</div>
+</body>
+</html>
