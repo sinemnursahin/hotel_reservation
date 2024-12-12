@@ -11,7 +11,7 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class AdminServiceImpl implements AdminService {
 
-    private  AdminRepository adminRepository;
+    private final AdminRepository adminRepository;
 
     @Override
     public Optional<Admin> findByEmailAndPassword(String email, String password) {

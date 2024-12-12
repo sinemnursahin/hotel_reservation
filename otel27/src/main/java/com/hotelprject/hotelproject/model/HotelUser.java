@@ -1,9 +1,9 @@
 package com.hotelprject.hotelproject.model;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.hotelprject.hotelproject.model.enums.UserRole;
+import jakarta.persistence.*;
 import lombok.*;
+import org.apache.catalina.User;
+
 @Entity
 @Getter
 @Setter
@@ -17,4 +17,6 @@ public class HotelUser {
     private String name;
     private String email;
     private String password;
+    @Enumerated(EnumType.STRING)
+    private UserRole userRole;
 }

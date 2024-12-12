@@ -1,10 +1,13 @@
 package com.hotelprject.hotelproject.service;
+import com.hotelprject.hotelproject.controller.ReservationController;
 import com.hotelprject.hotelproject.model.Reservation;
 import com.hotelprject.hotelproject.model.Room;
 import com.hotelprject.hotelproject.repository.ReservationRepository;
 import com.hotelprject.hotelproject.repository.RoomRepository;
 import org.springframework.stereotype.Service;
 import java.time.LocalDate;
+import java.util.List;
+
 @Service
 public class ReservationServiceImpl implements ReservationService {
     private final ReservationRepository reservationRepository;
@@ -24,6 +27,11 @@ public class ReservationServiceImpl implements ReservationService {
         reservation.setReservationDate(reservationDate);
         reservation.setEndDate(endDate);
         reservation.setUserInfo(user);
+        reservation.setStatus("ONAYLANDI");
         return reservationRepository.save(reservation);
+    }
+
+    public List<Reservation> findAllReservations() {
+        return reservationRepository.findAll();
     }
 }

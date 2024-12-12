@@ -1,6 +1,9 @@
 package com.hotelprject.hotelproject.model;
 import jakarta.persistence.*;
 import lombok.*;
+
+import java.util.List;
+
 @Entity
 @Getter
 @Setter
@@ -16,4 +19,6 @@ public class Room {
     private Boolean available;
     private Integer size;
     private String roomPictureName;
+    @OneToMany(fetch = FetchType.LAZY)
+    private List<RoomProperty> roomProperties;
 }

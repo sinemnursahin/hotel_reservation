@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezervasyonlar</title>
+    <link rel="stylesheet" th:href="@{/css/manage-reservations.css}">
+</head>
+<body>
+<div class="container">
+    <h1 class="title">Rezervasyon Bilgileri</h1>
+    <table class="reservation-table">
+        <thead>
+        <tr>
+            <th>Rezervasyon ID</th>
+            <th>Ad Soyad</th>
+            <th>Oda Numarası</th>
+            <th>Giriş Tarihi</th>
+            <th>Çıkış Tarihi</th>
+            <th>Ücret</th>
+            <th>Rezervasyon Durumu</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Dinamik olarak rezervasyonları doldur -->
+        <tr th:each="reservation : ${reservations}">
+            <td th:text="${reservation.id}"></td>
+            <td th:text="${reservation.fullName}"></td>
+            <td th:text="${reservation.roomNumber}"></td>
+            <td th:text="${reservation.checkInDate}"></td>
+            <td th:text="${reservation.checkOutDate}"></td>
+            <td th:text="${reservation.totalPrice}"></td>
+            <td th:text="${reservation.status}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

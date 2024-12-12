@@ -1,6 +1,7 @@
 package com.hotelprject.hotelproject.controller;
 import com.hotelprject.hotelproject.model.Reservation;
 import com.hotelprject.hotelproject.model.Room;
+import com.hotelprject.hotelproject.model.RoomProperty;
 import com.hotelprject.hotelproject.service.ReservationService;
 import com.hotelprject.hotelproject.service.RoomService;
 import jakarta.servlet.http.HttpSession;
@@ -27,6 +28,7 @@ public class ReservationController {
         }
         // Oda bilgisini model ile şablona gönderiyoruz
         model.addAttribute("room", room);
+        model.addAttribute("properties", room.getRoomProperties().stream().map(RoomProperty::getProperty).toList());
         return "reserve";  // reserve.html şablonunu döndür
     }
     @PostMapping("/reserve")

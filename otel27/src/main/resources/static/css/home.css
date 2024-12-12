@@ -1,160 +1,298 @@
 /* Genel Ayarlar */
 body {
-    font-family: 'Poppins', Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
-    background: linear-gradient(to bottom, #e3eafc, #f7f7fc);
+    background: linear-gradient(135deg, #f0e7ff, #d9c7f7); /* Çok açık mor tonları */
     color: #333;
 }
 
 /* Navbar */
 nav {
-    display: flex;
-    justify-content: space-between;  /* Butonları sol ve sağa yerleştirir */
-    align-items: center;
-    background: linear-gradient(90deg, #a18cd1, #fbc2eb);
-    color: white;
-    padding: 15px 30px;
+    background-color: #d3a9f7; /* Açık mor */
+    padding: 15px 40px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    flex-wrap: wrap;  /* Butonların alt alta geçmesini sağlar */
 }
 
-/* Navbar Linkleri */
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: 600;
-    font-size: 1em;
-    transition: all 0.3s ease-in-out;
-}
-
-nav a:hover {
-    color: #ffd700;
-    text-shadow: 0px 0px 8px rgba(255, 215, 0, 0.8);
-}
-
-/* Başlık */
-h1 {
-    text-align: center;
-    color: #6a11cb;
-    background: linear-gradient(to right, #6a11cb, #2575fc);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 3em;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin: 20px 0;
-}
-
-/* Navbar Butonları */
-nav .button-container {
-    display: flex;
-    justify-content: flex-end;  /* Sağda hizalar */
-    align-items: center;
-    width: 100%;
-    margin-top: 10px;
-}
-
-/* Navbar Linkleri Ortaya Hizala */
-nav .button-container a {
-    margin: 0 15px;
-    font-weight: bold;
-    font-size: 1.1em;
-}
-
-/* İptal Butonu */
-.cancel-button {
-    background: none;
-    color: white;
-    font-weight: bold;
-    font-size: 1.1em;
-    cursor: pointer;
-    transition: background 0.3s ease-in-out, transform 0.2s ease;
-}
-
-.cancel-button:hover {
-    color: #f76c6c;
-    transform: translateY(-3px);
-}
-
-/* Otel Bilgileri ve Kartlar */
-.hotel-info, .contact-info {
-    background: white;
-    margin: 20px auto;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    max-width: 900px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.hotel-info:hover, .contact-info:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-}
-
-.hotel-info h2, .contact-info h3 {
-    color: #6a11cb;
-    margin-bottom: 15px;
-    font-size: 1.8em;
-    border-bottom: 2px solid #6a11cb;
-    display: inline-block;
-    padding-bottom: 5px;
-}
-
-.hotel-info ul, .contact-info ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.hotel-info ul li, .contact-info ul li {
-    background: linear-gradient(to right, #e0c3fc, #8ec5fc);
-    margin: 10px 0;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.navbar-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.hotel-info ul li:hover {
-    transform: scale(1.02);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.hotel-info ul li span {
+.navbar-container .logo {
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
     font-weight: bold;
-    color: #6a11cb;
 }
 
-/* Yazı Alanı ve Etiketler */
-label {
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #b28cf7; /* Daha açık mor */
+}
+
+.user-actions a {
+    background-color: #b28cf7; /* Açık mor */
+    color: #6a5acd; /* Mor tonları */
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin: 0 10px;
+    text-align: center;
+    text-decoration: none;
     font-weight: bold;
-    color: #6a11cb;
-    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.user-actions a:hover {
+    background-color: #6a5acd;
+    color: white;
+}
+
+/* Hoşgeldiniz Bölümü */
+.welcome-section {
+    text-align: center;
+    padding: 80px 0; /* Yalnızca üst ve alt boşluk bırakıldı */
+    background: linear-gradient(135deg, #b28cf7, #d9c7f7); /* Açık mor tonları */
+    color: white;
+    border-radius: 10px;
+    margin: 0; /* Boşluk kaldırıldı */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px; /* Resmin büyümesini sağlamak için */
+}
+
+.welcome-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.welcome-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: white;
+    color: #6a5acd;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: scale(1.1);
+    background-color: #b28cf7;
+}
+
+/* Otel Resimleri Galerisi */
+#hotel-gallery {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #ffffff;
+    margin: 40px;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+#hotel-gallery h2 {
+    font-size: 28px;
+    color: #6a5acd;
+    margin-bottom: 30px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    width: 280px;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    border-radius: 10px;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.8);
+}
+
+/* Yorum Bölümü */
+#comments-section {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #d9c7f7, #b28cf7); /* Açık mor tonları */
+    margin: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#comments-section h2 {
+    font-size: 28px;
+    color: #6a5acd;
+    margin-bottom: 15px;
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.comment-form textarea {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    resize: none;
+    transition: border-color 0.3s ease;
+}
+
+.comment-form textarea:focus {
+    border-color: #6a5acd;
+}
+
+.comment-form button {
+    background-color: #6a5acd;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.comment-form button:hover {
+    background-color: #ffcf9c;
+    color: #6a5acd;
+}
+/* Otel Hakkında Bölümü */
+#hotel-info {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #ffffff;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Geçiş efekti */
+}
+
+#hotel-info:hover {
+    background-color: #f3e5f5; /* Açık mor ton geçişi */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Hover sırasında gölge büyümesi */
+}
+
+#hotel-info h2 {
+    font-size: 28px;
+    color: #9c4dcc; /* Açık mor ton */
+    margin-bottom: 15px;
+    transition: color 0.3s ease; /* Geçiş efekti */
+}
+
+#hotel-info:hover h2 {
+    color: #ab47bc; /* Daha açık mor ton */
+}
+
+#hotel-info p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+    transition: color 0.3s ease; /* Geçiş efekti */
+}
+
+#hotel-info:hover p {
+    color: #8e24aa; /* Açık mor ton */
+}
+
+#hotel-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#hotel-info ul li {
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease; /* Geçiş efekti */
+}
+
+#hotel-info ul li:hover {
+    background-color: #f3e5f5; /* Açık mor ton */
+    color: #9c4dcc; /* Açık mor ton */
+}
+
+
+/* İletişim Bilgileri */
+#contact-info {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #ffffff;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+#contact-info h2 {
+    font-size: 28px;
+    color: #6a5acd;
+    margin-bottom: 15px;
+}
+
+#contact-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#contact-info ul li {
+    font-size: 16px;
+    color: #555;
     margin-bottom: 5px;
 }
 
-/* Responsive Tasarım */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .button-container {
-        margin-top: 30px;
-    }
-
-    .hotel-info, .contact-info {
-        padding: 15px;
-    }
+/* Footer */
+footer {
+    background-color: #6a5acd;
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 40px;
 }
+
