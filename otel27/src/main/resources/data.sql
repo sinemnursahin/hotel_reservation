@@ -26,11 +26,11 @@ CREATE TABLE IF NOT EXISTS hotel_user (
                         );
 
 INSERT INTO room (name, price, available, room_picture_name, SIZE) VALUES
-                                                                 ('Tropik Oda', 3000.00, true, '1.jpg', 4),
-                                                                 ('Gökyüzü Odası', 1500.00, true, '2.jpg', 3),
-                                                                 ('Kitapsever Oda', 1200.00, true, '2.jpg', 2),
-                                                                 ('Yerel Kültür Odası', 3800.00, true, '3.jpg', 5),
-                                                                 ('Vintage Oda', 3500.00, true, '3.jpg', 4);
+                                                                 ('Tropik Oda', 3000.00, true, 'tropik.jpg', 4),
+                                                                 ('Gökyüzü Odası', 1500.00, true, 'gokyuzu.jpg', 3),
+                                                                 ('Overthink Odası', 1200.00, true, 'overthink.jpg', 2),
+                                                                 ('Akvaryum Odası', 3800.00, true, 'akvaryum.jpg', 5),
+                                                                 ('Vintage Odası', 3500.00, true, 'vintage.jpg', 4);
 
 insert into room_property(property) VALUES
                                             ('Egzotik Dekorasyon: Tropik bitkiler, bambu mobilyalar, deniz kabukları ve sıcak renklerle tasarlanmış bir iç mekan.'),
@@ -51,12 +51,12 @@ insert into room_property(property) VALUES
                                             ('Doğal Dokular: Ahşap mobilyalar, kitap temalı halılar ve minimalist dekorasyon ile doğal ve sıcak bir atmosfer yaratılmış.'),
                                             ('Hafif Ses Sistemi: Doğadan gelen hafif yağmur sesi veya rüzgar uğultusu, odada huzur dolu bir okuma deneyimi sunuyor.'),
                                             ('Rahat Çalışma Masası: Ahşap bir çalışma masası, ergonomik bir sandalye ve masa lambası ile donatılmış, okuma ve yazma için mükemmel bir alan sağlıyor.'),
-                                            ('Yerel El Sanatları: Odanın her köşesinde yerel sanatçıların yaptığı el yapımı ürünler, seramikler, dokuma halılar ve el işçiliği ürünleri sergileniyor.'),
-                                            ('Renkli Duvarlar: Yerel geleneksel desenler, renkli duvar kağıtları veya boyamalarla odanın atmosferine kültürel bir dokunuş ekleniyor.'),
-                                            ('Yerel Tekstil ve Kumaşlar: Yatak örtüleri, perde ve yastıklar, yerel dokuma kumaşlarla yapılmış, geleneksel desenlere sahip.'),
-                                            ('Tarihi Objeler ve Antikalar: Odanın dekorasyonunda, yerel kültürü simgeleyen eski objeler, antika mobilyalar veya geleneksel müzik aletleri yer alıyor.'),
-                                            ('Yerel Yemek Köşesi: Bir küçük köşe, yerel mutfağın örneklerinden oluşan bir mini bar ya da yiyecek bölmesiyle donatılmış; geleneksel içecekler veya atıştırmalıklar sergileniyor.'),
-                                            ('Bölgesel Bitkiler ve Çiçekler: Yerel bitkiler ve çiçeklerle dolu saksılar odanın her köşesine yayılmış. Bu, hem kültürel hem de doğal bir dokunuş sağlar.'),
+                                            ('Cam Tavan ve Duvarlar: Deniz yaşamını izlemek için tam panoramik bir görüş sunan cam tavan ve duvarlar.'),
+                                            ('Doğal Deniz Manzarası: Akvaryumun içindeki canlı balıklar, mercanlar ve diğer deniz canlıları ile çevrili ortam.'),
+                                            ('Ambiyans Aydınlatma: Renk değiştiren LED ışıklarla su altı atmosferini tamamlayan yumuşak aydınlatma.'),
+                                            ('Lüks Yatak Alanı: Deniz manzarasına bakan konforlu bir kral boy yatak.'),
+                                            ('Su Altı Ses Sistemleri: Deniz altı efektlerini hissettiren entegre ses sistemi.'),
+                                            ('Özel Jakuzi veya Küvet: Deniz manzarasına karşı rahatlama sağlayan bir jakuzi.'),
                                             ('Eski Tip Aydınlatma: Kristal avizeler, sarkıt lambalar veya eski tarz masa lambaları, vintage bir ambiyans yaratacak şekilde odanın her köşesine yerleştirilmiş.'),
                                             ('Klasik Halılar ve Kilimler: El dokuması eski halılar veya vintage tarzda desenli kilimler, odanın zeminine nostaljik bir dokunuş katıyor.'),
                                             ('Eski Metal Çerçeveli Yatak: Metal bir yatak çerçevesi, vintage tarzını destekleyen, romantik ve klasik bir detay oluşturuyor.'),
